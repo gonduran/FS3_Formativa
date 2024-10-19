@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface LibroService {
     List<Libro> getAllLibros();
     Optional<Libro> getLibroById(Long id);
-    Libro createLibro(Libro usuario);
-    Libro updateLibro(Long id,Libro usuario);
+    Libro createLibro(Libro libro);
+    Libro updateLibro(Long id,Libro libro);
     void deleteLibro(Long id);
 }

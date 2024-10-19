@@ -25,8 +25,8 @@ public class LibroServiceImpl implements LibroService{
     }
     
     @Override
-    public Libro createLibro(Libro usuario){
-        return libroRepository.save(usuario);
+    public Libro createLibro(Libro libro){
+        return libroRepository.save(libro);
     }
 
     @Override

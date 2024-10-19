@@ -27,7 +27,6 @@ public class Libro {
     @Column(name = "autor")
     private String autor;
 
-    @NotBlank(message = "No puede ingresar año publicacion vacio")
     @NotNull(message = "Año Publicacion obligatorio")
     @Column(name = "annoPublicacion")
     private int annoPublicacion;
