@@ -1,0 +1,4 @@
+com\example\biblioteca_ms_libros\BibliotecaMsLibrosApplicationTests.class
+com\example\biblioteca_ms_libros\service\LibroServiceTest.class
+com\example\biblioteca_ms_libros\controller\LibroControllerTest.class
+com\example\biblioteca_ms_libros\repository\LibroRepositoryTest.class

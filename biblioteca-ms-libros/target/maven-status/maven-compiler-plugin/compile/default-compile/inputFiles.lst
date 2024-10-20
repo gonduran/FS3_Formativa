@@ -1,0 +1,8 @@
+C:\Users\gonzaloduranadasme\Documents\GitHub\FS3_Formativa\biblioteca-ms-libros\src\main\java\com\example\biblioteca_ms_libros\BibliotecaMsLibrosApplication.java
+C:\Users\gonzaloduranadasme\Documents\GitHub\FS3_Formativa\biblioteca-ms-libros\src\main\java\com\example\biblioteca_ms_libros\controller\LibroController.java
+C:\Users\gonzaloduranadasme\Documents\GitHub\FS3_Formativa\biblioteca-ms-libros\src\main\java\com\example\biblioteca_ms_libros\exception\LibroBadRequestException.java
+C:\Users\gonzaloduranadasme\Documents\GitHub\FS3_Formativa\biblioteca-ms-libros\src\main\java\com\example\biblioteca_ms_libros\exception\LibroNotFoundException.java
+C:\Users\gonzaloduranadasme\Documents\GitHub\FS3_Formativa\biblioteca-ms-libros\src\main\java\com\example\biblioteca_ms_libros\model\Libro.java
+C:\Users\gonzaloduranadasme\Documents\GitHub\FS3_Formativa\biblioteca-ms-libros\src\main\java\com\example\biblioteca_ms_libros\repository\LibroRepository.java
+C:\Users\gonzaloduranadasme\Documents\GitHub\FS3_Formativa\biblioteca-ms-libros\src\main\java\com\example\biblioteca_ms_libros\service\LibroService.java
+C:\Users\gonzaloduranadasme\Documents\GitHub\FS3_Formativa\biblioteca-ms-libros\src\main\java\com\example\biblioteca_ms_libros\service\LibroServiceImpl.java
