@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Libro } from '../models/libro.model';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,10 @@ export class LibroService {
 
   // GET: Obtener todos los libros
   getLibros(): Observable<Libro[]> {
-    return this.http.get<Libro[]>(`${this.apiUrl}`);
+    return this.http.get<{ _embedded: { libroList: Libro[] } }>(this.apiUrl).pipe(
+      map(response => response._embedded.libroList)  // Extrae el array de libros
+    );
   }
-
   // GET: Obtener un libro por ID
   getLibro(id: number): Observable<Libro> {
     return this.http.get<Libro>(`${this.apiUrl}/${id}`);
@@ -29,11 +31,8 @@ export class LibroService {
   }
 
   // PUT: Actualizar un libro existente
-  updateLibro(libro: Libro): Observable<Libro> {
-    if (!libro.id) {
-      throw new Error("El libro debe tener un ID para ser actualizado.");
-    }
-    return this.http.put<Libro>(`${this.apiUrl}/${libro.id}`, libro);
+  updateLibro(id: number, libro: Libro): Observable<Libro> {
+    return this.http.put<Libro>(`${this.apiUrl}/${id}`, libro);
   }
 
   // DELETE: Eliminar un libro por ID

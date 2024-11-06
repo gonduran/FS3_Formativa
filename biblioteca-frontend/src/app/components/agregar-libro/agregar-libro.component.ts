@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
-import { provideHttpClient } from '@angular/common/http';
 import { LibroService } from '../../services/libro.service';
 import { Libro } from '../../models/libro.model';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-agregar-libro',
   standalone: true,
-  imports: [],
   templateUrl: './agregar-libro.component.html',
-  styleUrl: './agregar-libro.component.scss'
+  styleUrls: ['./agregar-libro.component.scss'],
+  providers: [LibroService],
+  imports: [FormsModule]
 })
 export class AgregarLibroComponent {
-  libro: Omit<Libro, 'id'> = {
+  libro: Partial<Libro> = {
     titulo: '',
     autor: '',
     annoPublicacion: 0,
@@ -22,8 +23,12 @@ export class AgregarLibroComponent {
   constructor(private libroService: LibroService, private router: Router) {}
 
   agregarLibro(): void {
-    this.libroService.addLibro(this.libro).subscribe(() => {
+    this.libroService.addLibro(this.libro as Libro).subscribe(() => {
       this.router.navigate(['/libros']);
     });
+  }
+
+  cancelar(): void {
+    this.router.navigate(['/libros']);
   }
 }
