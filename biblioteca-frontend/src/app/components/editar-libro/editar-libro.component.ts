@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
-import { LibroService, Libro } from '../../services/libro.service';
+import { LibroService } from '../../services/libro.service';
+import { Libro } from '../../models/libro.model';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
