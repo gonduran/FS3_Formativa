@@ -28,6 +28,7 @@
           <td>{{ libro.annoPublicacion }}</td>
           <td>{{ libro.genero }}</td>
           <td>
+            <button class="btn btn-info btn-sm me-2" [routerLink]="['/libros', libro.id]">Detalles</button>
             <!-- Botón para editar -->
             <button [routerLink]="['/editar-libro', libro.id]" class="btn btn-warning btn-sm me-2">
                 Editar
