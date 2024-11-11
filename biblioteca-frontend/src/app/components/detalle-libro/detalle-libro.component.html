@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <h2>Detalles del Libro</h2>
+  
+    <div *ngIf="libro" class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ libro?.titulo }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Autor: {{ libro?.autor }}</h6>
+        <p class="card-text"><strong>Año de Publicación:</strong> {{ libro?.annoPublicacion }}</p>
+        <p class="card-text"><strong>Género:</strong> {{ libro?.genero }}</p>
+        <button class="btn btn-secondary" (click)="volver()">Volver a la lista</button>
+      </div>
+    </div>
+  
+    <div *ngIf="!libro" class="alert alert-danger mt-3">
+      El libro no existe o no se pudo cargar.
+    </div>
+  </div>

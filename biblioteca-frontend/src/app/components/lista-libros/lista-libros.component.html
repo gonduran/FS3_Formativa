@@ -1,0 +1,50 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Lista de Libros</h2>
+    
+    <!-- Botón para agregar un nuevo libro -->
+    <div class="mb-3 text-end">
+      <button routerLink="/agregar-libro" class="btn btn-primary">
+        Agregar Nuevo Libro
+      </button>
+    </div>
+    
+    <!-- Tabla para mostrar la lista de libros -->
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Año de Publicación</th>
+          <th>Género</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let libro of libros">
+          <td>{{ libro.id }}</td>
+          <td>{{ libro.titulo }}</td>
+          <td>{{ libro.autor }}</td>
+          <td>{{ libro.annoPublicacion }}</td>
+          <td>{{ libro.genero }}</td>
+          <td>
+            <button class="btn btn-info btn-sm me-2" [routerLink]="['/libros', libro.id]">Detalles</button>
+            <!-- Botón para editar -->
+            <button [routerLink]="['/editar-libro', libro.id]" class="btn btn-warning btn-sm me-2">
+                Editar
+            </button>
+            
+            <!-- Botón para eliminar -->
+            <button *ngIf="libro.id !== undefined" (click)="eliminarLibro(libro.id!)" class="btn btn-danger btn-sm">
+                Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Mensaje cuando no hay libros -->
+    <div *ngIf="libros.length === 0" class="alert alert-info mt-3">
+      No hay libros disponibles.
+    </div>
+  </div>
