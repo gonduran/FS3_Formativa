@@ -1,9 +1,10 @@
 services:
   backend:
     image: biblioteca-ms-libros
+    container_name: biblioteca_ms_libros
     build:
       context: ./biblio-ms-libros-arquetipo
-    container_name: biblioteca_ms_libros
+      dockerfile: Dockerfile
     ports:
       - "8091:8091"
     environment:
@@ -13,7 +14,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: ClaseFullStack3-
     networks:
       - libros_network
-    restart: unless-stopped
+    restart: always
 
   frontend:
     # Configuración básica del contenedor
@@ -21,7 +22,7 @@ services:
     container_name: biblioteca_frontend
     build:
       context: ./biblioteca-frontend
-    
+      dockerfile: Dockerfile
     # Configuración de red y dependencias
     ports:
       - "80:80"
@@ -30,7 +31,7 @@ services:
     depends_on:
       - backend
     # Configuración de reinicio
-    restart: unless-stopped
+    restart: always
     # Variables de entorno
     environment:
       # Configuración de comunicación

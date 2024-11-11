@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class LibroService {
 
-  private apiUrl = 'http://localhost:8091/libros';
+  private apiUrl = 'http://backend:8091/libros';
 
   constructor(private http: HttpClient) { }
 
