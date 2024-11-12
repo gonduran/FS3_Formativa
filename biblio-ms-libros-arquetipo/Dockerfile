@@ -42,4 +42,4 @@ EXPOSE 8091
 
 # Ejecutar el servicio
 # IMPORTANTE MODIFICAR: nombre del JAR ?.jar
-ENTRYPOINT [ "java", "-jar","/app/biblio-ms-libros-arquetipo.jar" ]
+CMD [ "java", "-jar", "/app/biblio-ms-libros-arquetipo.jar" ]
