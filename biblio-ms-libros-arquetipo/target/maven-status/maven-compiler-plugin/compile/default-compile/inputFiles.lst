@@ -1,0 +1,9 @@
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/App.java
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/config/WebConfig.java
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/controller/LibroController.java
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/exception/LibroBadRequestException.java
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/exception/LibroNotFoundException.java
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/model/Libro.java
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/repository/LibroRepository.java
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/service/LibroService.java
+/Users/gonzaloduranadasme/Documents/GitHub/FS3_Formativa/biblio-ms-libros-arquetipo/src/main/java/com/example/biblio_ms_libros/service/LibroServiceImpl.java
