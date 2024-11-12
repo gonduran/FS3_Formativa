@@ -26,4 +26,4 @@ ENV TNS_ADMIN=/app/wallet
 EXPOSE 8091
 
 # Ejecutar el servicio
-ENTRYPOINT [ "java", "-jar","/app/biblioteca-ms-libros.jar" ]
+CMD [ "java", "-jar", "/app/biblioteca-ms-libros.jar" ]

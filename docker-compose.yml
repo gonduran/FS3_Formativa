@@ -35,7 +35,7 @@ services:
     # Variables de entorno
     environment:
       # Configuración de comunicación
-      BACKEND_URL: http://backend:8091
+      BACKEND_URL: http://backend:8091/libros
 
 networks:
   libros_network:
